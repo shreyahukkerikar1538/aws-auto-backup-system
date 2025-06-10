@@ -51,6 +51,8 @@ A serverless project using AWS S3, Lambda, and SNS to auto-backup files and send
   ]
 }
 
+---
+
 ### ✅ Step 4: Create the Lambda Function
 1. Go to Lambda > Create function.
 2. Name: autoBackupFunction
@@ -59,10 +61,13 @@ A serverless project using AWS S3, Lambda, and SNS to auto-backup files and send
     Choose “Use an existing role”
     Select: lambda-backup-role
 5.Click Create function
+---
 
-### ✅ Step 4: Create the Lambda Function
+### ✅ Step 5: Create the Lambda Function
 1.Paste the following code in the Lambda editor(code provided)
 2.Click Deploy after saving.
+
+---
 
 ### ✅ Step 6: Add Trigger from S3
 1. Go to Lambda function → Configuration > Triggers → Click “Add trigger”
@@ -71,6 +76,8 @@ A serverless project using AWS S3, Lambda, and SNS to auto-backup files and send
 4.Event type: PUT (ObjectCreated:Put)
 5.Uncheck recursive invocation box (avoid loops)
 6.Click Add
+
+---
 
 ### ✅ Step 7: Upload a File for Testing
 1. Go to S3 → source-bucket-shreya → Upload
